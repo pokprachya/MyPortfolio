@@ -7,7 +7,7 @@ import Blog from './pages/Blog'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/MyPortfolio">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project" element={<Project />} />

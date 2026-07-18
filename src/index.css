@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", "Impact", "Arial Black", sans-serif;
+  --font-sans: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+::selection {
+  background: #ccff00;
+  color: #000000;
+}
+
+::-moz-selection {
+  background: #ccff00;
+  color: #000000;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #030014;
+  font-family: var(--font-sans);
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Slow spin animation for gradient border */
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Text stroke utilities */
+.text-stroke-white {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+  color: transparent;
+}
+
+.text-stroke-white-thin {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .md\:text-stroke-2 {
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.9);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-stroke-3 {
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Smooth input focus */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* Hide SociableKit Branding */
+.sk-ww-linkedin-profile-post .sk_branding,
+.sk-ww-linkedin-profile-post .sk-branding,
+.sk-ww-linkedin-profile-post .sk-watermark,
+.sk-ww-linkedin-profile-post a[href*="sociablekit.com"] {
+  display: none !important;
+}

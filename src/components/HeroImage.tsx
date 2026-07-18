@@ -8,7 +8,7 @@ export default function HeroImage() {
       }}
     >
       <img
-        src="/src/img/pok.png"
+        src="https://images2.imgbox.com/0e/1c/fGt5EKjn_o.png"
         alt="Prachya — Creative Director portrait"
         className="max-h-full max-w-[100vw] h-auto sm:h-full w-full sm:w-auto object-contain object-bottom brightness-95 grayscale contrast-125 drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 ease-out hover:scale-[1.04]"
         draggable={false}

@@ -122,9 +122,9 @@ export default function ProjectDetail() {
             {/* Profile Section */}
             <section className="bg-white/[0.03] border border-white/10 rounded-[12px] p-6 sm:p-8">
               <div className="flex flex-col sm:flex-row items-center gap-6">
-                <img 
-                  src="/src/img/Profile.png" 
-                  alt="Prachya Jumpapho" 
+                <img
+                  src="https://thumbs2.imgbox.com/f5/b0/edxwODlv_t.png"
+                  alt="Prachya Jumpapho"
                   className="w-20 h-20 rounded-full object-cover object-top bg-white/10 flex-shrink-0"
                 />
                 <div className="flex-1 text-center sm:text-left">

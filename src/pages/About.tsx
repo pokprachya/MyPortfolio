@@ -389,7 +389,7 @@ export default function About() {
         }}
       >
         <img
-          src="/src/img/Profile2.png"
+          src="https://images2.imgbox.com/0e/1c/fGt5EKjn_o.png"
           alt="Prachya Jumpapho"
           className="h-full w-auto object-contain brightness-95 grayscale contrast-125 opacity-80"
           draggable={false}
@@ -546,30 +546,27 @@ export default function About() {
                   key={i}
                   className="group grid lg:grid-cols-12 gap-8 pb-12 border-b border-white/5 last:border-0"
                 >
-                  <div className="lg:col-span-3">
-                    <span className="font-mono text-sm text-white/40">{job.period}</span>
-                  </div>
                   <div className="lg:col-span-9 space-y-4">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                      <div className="flex items-center gap-4">
-                        {job.logo ? (
-                          <div className="w-14 h-14 rounded-[12px] overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center">
-                            <img
-                              src={job.logo}
-                              alt={`${job.company} logo`}
-                              className="h-full w-full object-contain"
-                            />
-                          </div>
-                        ) : null}
-                        <div>
-                          <h3 className="font-sans text-2xl lg:text-3xl font-bold text-white mb-2 group-hover:text-[#CCFF00] transition-colors duration-300">
-                            {job.title}
-                          </h3>
-                          <p className="font-mono text-base text-white/60">{job.company}</p>
+                    <div className="flex items-center gap-4">
+                      {job.logo ? (
+                        <div className="w-20 h-20 rounded-[12px] overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center flex-shrink-0">
+                          <img
+                            src={job.logo}
+                            alt={`${job.company} logo`}
+                            className="h-full w-full object-contain"
+                          />
                         </div>
+                      ) : null}
+                      <div>
+                        <h3 className="font-sans text-2xl lg:text-3xl font-bold text-white mb-2 group-hover:text-[#CCFF00] transition-colors duration-300">
+                          {job.title}
+                        </h3>
+                        <p className="font-mono text-base text-white/60">{job.company} - <span className="text-white/40">{job.type}</span></p>
                       </div>
-                      <span className="font-mono text-xs text-white/40 uppercase tracking-wider">{job.type}</span>
                     </div>
+                  </div>
+                  <div className="lg:col-span-3 text-right">
+                    <span className="font-mono text-sm text-white/40">{job.period}</span>
                   </div>
                 </div>
               ))}
@@ -618,7 +615,7 @@ export default function About() {
                     </div>
                   </div>
                   <div className="flex items-center gap-2 text-right text-white/40">
-                    <p className="font-mono text-sm uppercase tracking-[0.3em]">
+                    <p className="font-mono text-sm">
                       {item.period}
                     </p>
                   </div>

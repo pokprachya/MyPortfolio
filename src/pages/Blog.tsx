@@ -165,7 +165,7 @@ export default function Blog() {
                   <div className="flex justify-between items-start mb-6">
                     <div className="flex items-center gap-4">
                       <img 
-                        src="/src/img/Profile.png" 
+                        src="https://thumbs2.imgbox.com/f5/b0/edxwODlv_t.png" 
                         alt="Prachya Jumpapho" 
                         className="w-12 h-12 rounded-full object-cover object-top bg-white/10"
                       />

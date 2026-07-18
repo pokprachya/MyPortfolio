@@ -58,7 +58,7 @@ export default function Project() {
           <div className="flex items-center gap-4">
             <div className="flex-shrink-0">
               <img 
-                src="/src/img/Profile.png" 
+                src="https://thumbs2.imgbox.com/f5/b0/edxwODlv_t.png" 
                 alt="Prachya Jumpapho" 
                 className="w-16 h-16 rounded-full object-cover object-top bg-white/10"
               />

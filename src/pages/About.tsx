@@ -254,21 +254,21 @@ const education = [
     school: 'Ramkhamhaeng University',
     details: 'MBA Innovation Management, Ramkhamhaeng University — GPA 3.43',
     period: 'Apr 2012 - Apr 2014',
-    logo: 'https://framerusercontent.com/images/ZKEjp5lkgb4qDOOaGKCv2fe6avk.jpeg?width=222&height=227',
+    logo: 'https://images2.imgbox.com/29/e1/JFB4RckI_o.png',
   },
   {
     degree: 'Mini MBA Class Data Analyst',
     school: 'Chulalongkorn University',
     details: 'Mini MBA Data Science',
     period: 'Apr 2024 - Sep 2024',
-    logo: 'https://framerusercontent.com/images/lEc0VxQ8dRWfiWKaJyE2rGxoQg.png?width=570&height=498',
+    logo: 'https://images2.imgbox.com/51/5a/1Zm9JtVs_o.png',
   },
   {
     degree: "Bachelor's Degree",
     school: 'Ramkhamhaeng University',
     details: 'Communication Art/Advertising, Ramkhamhaeng University — GPA 3.44',
     period: 'Sep 2000 - Aug 2004',
-    logo: 'https://framerusercontent.com/images/ZKEjp5lkgb4qDOOaGKCv2fe6avk.jpeg?width=222&height=227',
+    logo: 'https://images2.imgbox.com/29/e1/JFB4RckI_o.png',
   },
 ]
 
@@ -552,7 +552,7 @@ export default function About() {
                   <div className="lg:col-span-9 space-y-4">
                     <div className="flex items-center gap-4">
                       {job.logo ? (
-                        <div className="w-20 h-20 rounded-[12px] overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center flex-shrink-0">
+                        <div className="w-20 h-20 rounded-[20px] overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center flex-shrink-0">
                           <img
                             src={job.logo}
                             alt={`${job.company} logo`}
@@ -596,7 +596,7 @@ export default function About() {
                   className="group flex items-center justify-between gap-6 rounded-[24px] border border-white/10 bg-white/[0.02] px-6 py-5 transition-all duration-300 hover:border-[#CCFF00]/30 hover:bg-white/[0.04]"
                 >
                   <div className="flex items-center gap-5 min-w-0">
-                    <div className="w-20 h-20 rounded-[18px] overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-[20px] overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center">
                       <img
                         src={item.logo}
                         alt={`${item.school} logo`}
@@ -664,7 +664,7 @@ export default function About() {
                     className="group flex items-center gap-6 rounded-[24px] border border-white/10 hover:border-[#CCFF00]/50 bg-white/[0.02] hover:bg-white/[0.04] p-6 transition-all duration-500"
                   >
                     {project.image && (
-                      <div className="w-20 h-20 flex-shrink-0 rounded-[16px] overflow-hidden border border-white/10 bg-white/5">
+                      <div className="w-20 h-20 flex-shrink-0 rounded-[20px] overflow-hidden border border-white/10 bg-white/5">
                         <img
                           src={project.image}
                           alt={project.name}

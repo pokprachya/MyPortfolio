@@ -381,17 +381,20 @@ export default function About() {
 
       {/* Hero Background Image - Fixed Position */}
       <div
-        className="fixed bottom-0 right-0 z-[5] pointer-events-none"
+        className="fixed bottom-0 left-0 right-0 z-[5] pointer-events-none sm:right-0 sm:left-auto sm:w-auto"
         style={{
-          height: 'clamp(60vh, 90vh, 120vh)',
-          width: 'auto',
-          maxHeight: '120%',
+          height: 'auto',
+          maxHeight: '100vh',
         }}
       >
         <img
           src="https://images2.imgbox.com/0e/1c/fGt5EKjn_o.png"
           alt="Prachya Jumpapho"
-          className="h-full w-auto object-contain brightness-95 grayscale contrast-125 opacity-80"
+          className="w-full h-auto object-cover brightness-95 grayscale contrast-125 opacity-80 sm:h-full sm:w-auto sm:object-contain"
+          style={{
+            maxHeight: '100vh',
+            minHeight: '80vh'
+          }}
           draggable={false}
         />
       </div>

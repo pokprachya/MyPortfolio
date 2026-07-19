@@ -7,7 +7,7 @@ import { EffectComposer, Bloom } from '@react-three/postprocessing'
 /*  Particles – 15 000 point-cloud with mouse repulsion                       */
 /* -------------------------------------------------------------------------- */
 function Particles() {
-  const count = 15_000
+  const count = 8_000
   const pointsRef = useRef<THREE.Points>(null)
   const pointer = useRef(new THREE.Vector3())
   const { viewport } = useThree()
@@ -132,7 +132,7 @@ function Particles() {
 /*  Energy Lines – 530 dashed lines streaming forward in Z                     */
 /* -------------------------------------------------------------------------- */
 function EnergyLines() {
-  const lineCount = 530
+  const lineCount = 300
   const groupRef = useRef<THREE.Group>(null)
 
   const lines = useMemo(() => {
@@ -228,8 +228,13 @@ export default function ParticleBackground() {
     <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
       <Canvas
         camera={{ position: [0, 0, 30], fov: 60 }}
-        dpr={[1, 1.5]}
-        gl={{ antialias: false, alpha: true }}
+        dpr={[1, 1]}
+        gl={{ 
+          antialias: false, 
+          alpha: true,
+          powerPreference: 'high-performance',
+          preserveDrawingBuffer: false
+        }}
         style={{ background: 'transparent' }}
       >
         <Scene />

@@ -388,11 +388,11 @@ export default function About() {
         }}
       >
         <img
-          src="https://images2.imgbox.com/0e/1c/fGt5EKjn_o.png"
+          src="https://cdn.prod.website-files.com/64b402b532dbf85fa586d5cc/6a621bb3ac716fe0b52d3bd7_Pok.png"
           alt="Prachya Jumpapho"
           className="w-full h-auto object-cover brightness-95 grayscale contrast-125 opacity-80 sm:h-full sm:w-auto sm:object-contain"
           style={{
-            maxHeight: '100vh',
+            maxHeight: '90vh',
             minHeight: '80vh'
           }}
           draggable={false}

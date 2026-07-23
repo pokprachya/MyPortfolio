@@ -214,6 +214,14 @@ interface ExperienceItem {
   type: string
 }
 
+interface EducationItem {
+  degree: string
+  school: string
+  details: string
+  period: string
+  logo: string
+}
+
 const defaultExperience: ExperienceItem[] = [
   {
     period: 'May 2025 - Present',
@@ -248,7 +256,10 @@ const defaultExperience: ExperienceItem[] = [
 const EXPERIENCE_SHEET_URL =
   'https://docs.google.com/spreadsheets/d/1Rx3mfHe0i49OhMFSqWvVLPXj11miS3n2EahVTb7HpzI/export?format=csv&gid=0'
 
-const education = [
+const EDUCATION_SHEET_URL =
+  'https://docs.google.com/spreadsheets/d/1YlGrPDP7TDdaSAMbbfqEDcNT5gt1Uxd7t3flZyBlhrE/export?format=csv&gid=0'
+
+const defaultEducation = [
   {
     degree: "Master's Degree",
     school: 'Ramkhamhaeng University',
@@ -313,6 +324,7 @@ const recommendations = [
 export default function About() {
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [experience, setExperience] = useState<ExperienceItem[]>(defaultExperience)
+  const [education, setEducation] = useState<EducationItem[]>(defaultEducation)
   const [projects, setProjects] = useState<AboutProject[]>([])
   const [isProjectsLoading, setIsProjectsLoading] = useState(true)
 
@@ -343,6 +355,35 @@ export default function About() {
     }
 
     fetchExperience()
+  }, [])
+
+  useEffect(() => {
+    async function fetchEducation() {
+      try {
+        const res = await fetch(EDUCATION_SHEET_URL)
+        const text = await res.text()
+        const rows = parseCsv(text)
+
+        const parsed = rows
+          .filter((row) => row[0]?.trim() || row[1]?.trim())
+          .map((row) => ({
+            degree: row[0] || '',
+            school: row[1] || '',
+            details: row[2] || '',
+            period: row[3] || '',
+            logo: row[4] || '',
+          }))
+          .filter((item) => item.degree || item.school)
+
+        if (parsed.length > 0) {
+          setEducation(parsed)
+        }
+      } catch (error) {
+        console.error('Failed to load education', error)
+      }
+    }
+
+    fetchEducation()
   }, [])
 
   useEffect(() => {

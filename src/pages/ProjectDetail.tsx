@@ -123,7 +123,7 @@ export default function ProjectDetail() {
             <section className="bg-white/[0.03] border border-white/10 rounded-[12px] p-6 sm:p-8">
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <img
-                  src="https://thumbs2.imgbox.com/f5/b0/edxwODlv_t.png"
+                  src="https://scontent.fbkk12-2.fna.fbcdn.net/v/t39.30808-1/581960686_4373706709622235_7990854004563825280_n.jpg?stp=c206.2.625.625a_dst-jpg_tt6&cstp=mx625x625&ctp=s480x480&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=sGds_31Ma_MQ7kNvwHHFBxS&_nc_oc=Adq66abFsR0WSkmmsKJJ8jrhMg5bx9wr9kI58bX0knALPNpU1g4qSXLTPCKSXaeAQA1iRt0D1bOCvQOVBC6PelI0&_nc_zt=24&_nc_ht=scontent.fbkk12-2.fna&_nc_gid=hn4L1EfTrPtVw7PXoLBUhQ&_nc_ss=7b2a8&oh=00_AQBQ-_krzkWPPr1D0B7UQMMleanMheq6IV1W4kOAxW7ouA&oe=6A67E198"
                   alt="Prachya Jumpapho"
                   className="w-20 h-20 rounded-full object-cover object-top bg-white/10 flex-shrink-0"
                 />

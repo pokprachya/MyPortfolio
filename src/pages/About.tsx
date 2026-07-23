@@ -285,6 +285,12 @@ const defaultEducation = [
 
 const PROJECT_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1yocKWGuxaLoyj7jrkEO1Q7g1-CvULOjAeNi4wSerSTY/export?format=csv'
 
+async function fetchCsvRows(url: string): Promise<string[][]> {
+  const res = await fetch(url)
+  const text = await res.text()
+  return parseCsv(text)
+}
+
 interface AboutProject {
   image: string
   name: string
@@ -331,9 +337,7 @@ export default function About() {
   useEffect(() => {
     async function fetchExperience() {
       try {
-        const res = await fetch(EXPERIENCE_SHEET_URL)
-        const text = await res.text()
-        const rows = parseCsv(text)
+        const rows = await fetchCsvRows(EXPERIENCE_SHEET_URL)
 
         const parsed = rows
           .filter((row) => row[0]?.trim())
@@ -360,9 +364,7 @@ export default function About() {
   useEffect(() => {
     async function fetchEducation() {
       try {
-        const res = await fetch(EDUCATION_SHEET_URL)
-        const text = await res.text()
-        const rows = parseCsv(text)
+        const rows = await fetchCsvRows(EDUCATION_SHEET_URL)
 
         const parsed = rows
           .filter((row) => row[0]?.trim() || row[1]?.trim())
@@ -389,9 +391,7 @@ export default function About() {
   useEffect(() => {
     async function fetchProjects() {
       try {
-        const res = await fetch(PROJECT_SHEET_URL)
-        const text = await res.text()
-        const rows = parseCsv(text)
+        const rows = await fetchCsvRows(PROJECT_SHEET_URL)
 
         const parsed = rows
           .filter((row) => row[0]?.trim())
